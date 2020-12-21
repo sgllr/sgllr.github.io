@@ -23,30 +23,35 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="每一天都留下印记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的一生">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="前期准备阶段多通道卷积与池化在处理多通道输入数据时，池化层对每个输入通道分别池化，而不是像卷积层那样将各通道的输入按通道相加。 VGGNet的结构  VGGNet成功地构筑了16~19层深度的卷积神经网络 VGGNet网络结构很规整，全部使用$3\times 3$的小型卷积核以及$2\times 2$的最大池化层（C有使用$1\times 1$卷积核） $3\times 3$卷积核：stride">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ML_final_project">
+<meta property="og:url" content="http://yoursite.com/2020/12/21/ML-final-project/index.html">
 <meta property="og:site_name" content="我的一生">
-<meta property="og:description" content="每一天都留下印记">
+<meta property="og:description" content="前期准备阶段多通道卷积与池化在处理多通道输入数据时，池化层对每个输入通道分别池化，而不是像卷积层那样将各通道的输入按通道相加。 VGGNet的结构  VGGNet成功地构筑了16~19层深度的卷积神经网络 VGGNet网络结构很规整，全部使用$3\times 3$的小型卷积核以及$2\times 2$的最大池化层（C有使用$1\times 1$卷积核） $3\times 3$卷积核：stride">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/slzhang/AppData/Roaming/Typora/typora-user-images/image-20201221084003907.png">
+<meta property="article:published_time" content="2020-12-21T00:24:42.000Z">
+<meta property="article:modified_time" content="2020-12-21T01:20:05.699Z">
 <meta property="article:author" content="sgllr">
+<meta property="article:tag" content="机器学习, 卷积网络, VGG, Pytorch, 图像分类">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/slzhang/AppData/Roaming/Typora/typora-user-images/image-20201221084003907.png">
 
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/12/21/ML-final-project/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>我的一生</title>
+<title>ML_final_project | 我的一生</title>
   
 
 
@@ -193,7 +198,7 @@
   <aside class="sidebar">
 
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -206,6 +211,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5"><span class="nav-number">1.</span> <span class="nav-text">前期准备阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%80%9A%E9%81%93%E5%8D%B7%E7%A7%AF%E4%B8%8E%E6%B1%A0%E5%8C%96"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">多通道卷积与池化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VGGNet%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">VGGNet的结构</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -263,9 +269,10 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
@@ -285,9 +292,9 @@
       <meta itemprop="name" content="我的一生">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/21/ML-final-project/" class="post-title-link" itemprop="url">ML_final_project</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ML_final_project
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -340,7 +347,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="前期准备阶段"><a href="#前期准备阶段" class="headerlink" title="前期准备阶段"></a>前期准备阶段</h1><h4 id="多通道卷积与池化"><a href="#多通道卷积与池化" class="headerlink" title="多通道卷积与池化"></a>多通道卷积与池化</h4><p>在处理多通道输入数据时，<strong>池化层对每个输入通道分别池化，而不是像卷积层那样将各通道的输入按通道相加</strong>。</p>
+        <h1 id="前期准备阶段"><a href="#前期准备阶段" class="headerlink" title="前期准备阶段"></a>前期准备阶段</h1><h4 id="多通道卷积与池化"><a href="#多通道卷积与池化" class="headerlink" title="多通道卷积与池化"></a>多通道卷积与池化</h4><p>在处理多通道输入数据时，<strong>池化层对每个输入通道分别池化，而不是像卷积层那样将各通道的输入按通道相加</strong>。</p>
 <h4 id="VGGNet的结构"><a href="#VGGNet的结构" class="headerlink" title="VGGNet的结构"></a>VGGNet的结构</h4><p><img src="C:/Users/slzhang/AppData/Roaming/Typora/typora-user-images/image-20201221084003907.png" alt="image-20201221084003907" style="zoom:50%;" /></p>
 <ul>
 <li>VGGNet成功地构筑了16~19层深度的卷积神经网络</li>
@@ -357,7 +364,6 @@
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014453898/article/details/101024805">pytorch中VGG网络的源码解读</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/pytorch/vision/blob/master/torchvision/models/vgg.py">vgg.py源码</a></p>
 
-      
     </div>
 
     
@@ -365,104 +371,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C-VGG-Pytorch-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" rel="tag"># 机器学习, 卷积网络, VGG, Pytorch, 图像分类</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/20/my-life/" rel="prev" title="生命 生存 生活 生命">
+                  <i class="fa fa-chevron-left"></i> 生命 生存 生活 生命
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/20/my-life/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/longmao.jpg">
-      <meta itemprop="name" content="sgllr">
-      <meta itemprop="description" content="每一天都留下印记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的一生">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/20/my-life/" class="post-title-link" itemprop="url">生命 生存 生活 生命</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-12-20 09:47:57 / 修改时间：09:51:00" itemprop="dateCreated datePublished" datetime="2020-12-20T09:47:57+08:00">2020-12-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>67</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>0岁时，父母给了我生命；</p>
-<p>20岁之前，努力求学，以求生存；</p>
-<p>20岁~40岁，小有成就，优雅生活；</p>
-<p>40岁之后，追求信仰，实现生命的真正意义！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
