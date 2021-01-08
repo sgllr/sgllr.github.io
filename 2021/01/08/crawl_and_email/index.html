@@ -23,18 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="每一天都留下印记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的一生">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+<meta name="description" content="这是加密文章。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬取Featurize网站可用GPU">
+<meta property="og:url" content="http://yoursite.com/2021/01/08/crawl_and_email/index.html">
 <meta property="og:site_name" content="我的一生">
-<meta property="og:description" content="每一天都留下印记">
+<meta property="og:description" content="这是加密文章。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-08T00:24:42.000Z">
+<meta property="article:modified_time" content="2021-01-08T11:19:52.683Z">
 <meta property="article:author" content="sgllr">
+<meta property="article:tag" content="Python, 爬虫">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/">
+<link rel="canonical" href="http://yoursite.com/2021/01/08/crawl_and_email/">
 
 
 <script class="page-configurations">
@@ -42,11 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>归档 | 我的一生</title>
+<title>爬取Featurize网站可用GPU | 我的一生</title>
   
 
 
@@ -193,7 +196,7 @@
   <aside class="sidebar">
 
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -206,6 +209,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="nav-number">2.</span> <span class="nav-text">简单的网络爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">基本思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E5%8F%96"><span class="nav-number">2.2.</span> <span class="nav-text">信息的爬取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93"><span class="nav-number">2.2.1.</span> <span class="nav-text">需要用到的库</span></a></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -263,89 +267,115 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/08/crawl_and_email/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/longmao.jpg">
+      <meta itemprop="name" content="sgllr">
+      <meta itemprop="description" content="每一天都留下印记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的一生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          爬取Featurize网站可用GPU
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+      <time title="创建时间：2021-01-08 08:24:42 / 修改时间：19:19:52" itemprop="dateCreated datePublished" datetime="2021-01-08T08:24:42+08:00">2021-01-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>438</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <div id="hexo-blog-encrypt" data-wpm="密码错误！" data-whm="密码错误！"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="请输入密码..." /><label>请输入密码...</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="98b018516aac4da810a608624566a475b5143e439f666c95d7aea337fcb9d1f9">2b7dbe163d805be6aec4e329559b4175babc123450dd1e1f9a10ea0353cd7d658d065bc41d6ac401230ade833e498050ed4641c9220300a0205fb73ba0525f603c736b662f1bcee27b09759eb7270a5a4c27cc7c9bbf2cecba699b58b1d9cb694fe4e10aea341424529a9a2626acfce917f5256599fd638b9b17a9f5dddfbcab0b0fec2809268db7fa4a795cad420db8d4f7477163b17935253b57b7cfda6d631e45e1cb7519caa283c9b8ad930d751bb4008b985a0d8220d9096cd219f9e8c05fab4ed1921f19d01cb8035ebad79992af90302cc3efda9269e69215b53fd8d49f273b3c66d6d19d6db0725d8bad407dcce89c8dd0ad6aa58b45c597fa429912ca41294fd5de758b50c72015975f726e9bff9a7bb6ddbeeb3e37b01bb93ff055dbfb07f2f009e27ec8e036c7deb867451c96e25c5c0320bdc18a057609d5b73c2d923e27993c8908a8c3fb40e05991def3ab6f94d3d407f9e746a02135d628e7210aaf87b503d4c96ef098af1b764a55b79db4351cc093f5980f904b8e27ef6f00524ee5b683044c7b43984d3c479c2774283054660506afd89cc4ef2bde14121b6be9bd2e9d3dfbfa2ca4bc872e9bdfaad68924d8a9cf360fa698751df33358f29e743b9d7931e65e73987d5f1515e82fded144565168d1f2cc7644358df0e352de1b081c507505dff46df3bc4a467140260e505b38029153dcb89dcbe5729060ab5253f51a53cad2b8ce132b8cade92743b6a57ede3ca139c5708b6b3b81368f36e388cd300ab75e28ddf3276ddb9915b757433dcbc23cfb019159f703504124832576eed8b2625de3b1effd1a3f1e94490d620a11a12e7d3b12a682d1e6c3e4d6a53877afd8feaf12edc85b3a827d5f21f64d2c88055651291768f46004500724dd2d307dfa14999c909cf2987370d426727ec8272802b5c87bf84911b26fa4d960c75f0e305033d64431dd9188f1243360e8959dc3e5e1f46e904e82ea76759c4c4527ebb85b25915b2790ab8b15deb4f3e2e246dcbfe7071846466ffd2fb4cf4552db225ed44c55e161d2533115d6573d3e2a125e9cb1e02970c7a2ee60f6ca7e5b98ab3192de0a199fdd7ef70e79865b9eab88b8e4de41924254c637cf05caeee6b373b52172aa0c8c660e211e9a1205d6ee9c16657357b5407837f5a178cb467b55f9e340f3ba8eb3405edf0fcb63f41241567c7dfb1a6673668ce9e26ef0b31d10b8af0fff58b1753593789d7623cdc255c3621d450ece2f63c47f686547ac3de87f3ef2e670b42e0fad71cb50ac27aa6d67143f97d2a919989909ab512511a230fc0a923d0b5d006ddf98cfd967823c2027bab01058ea1dccd5a599729a632ad5951194aade6543ba4bf947a31891edd4720b6b93f32ba89537e851d104dc6e3b94bafcc2906022c87b1e7b5f8ed569e7e5376939688d0dc6fb8d3f0f26058ba5d2608d78e7bc2268c8945c1fc8c91057453969763212e1067f25fc502b4592be76ae34c3d14d356050b342b5d9191287b1ae218aaed1610e1661a2f090780692e151f44e02374c9d8b1e605e95b57e7953ff754fef2d34f9dc8f46e9ee5a7b0cfbca3ab4b70239a52c23676b40a44b874f0c3d3c51d10b0101afdab6747d9fb9b6dd0d7deadc6eb0e2b9dec09734bd61b52a912fb510d52e19e1b5e3221c6fae5f6b68e1a93e51ddae4415e7a8db6607c8485de0bebbc71d4e4426ff4a908c207ee44cbc8d6b2bc75556d9af05a1c517711cd077b257a4b25e55b09c40ebf1d8485b4d81a4619a55897498ea108848c8273aba25b461e7204db0ebf64b38f28a3237f10999a2011ddfdf58e00d85d8ba809a335eef1e675714c34c793569a434c261d84de7a94d6258c7d873cf3826d091d018fee71b39d1a0461368398090d21685591a84b3a33c067e76572773da4821a2196414ebfa837c5678b54c6f3d51fe8192850ff5e4f34ea9c425d510194a587965a2293d8ee74fa507bbc351cc3992599ce78a73924e404ae8a257fbde06fbcc3953ba7f1fdd5bdd20a932d7acdb38d7b2e2007a194c20fd336cdb3765a116f433a5af8b93c3b308b6bba1100547dc0f44d13d7f11cc42715f0f200167a19a91487b5159d6917d685b637d3ac6a2fa212719807051992d62a393d9a5039ec3828180626041e327ee1ffa9618c8127fee53ff9af76e32ef1458c525411597a95b8707afdee04de9a6a641a7fab02422c3e76cc11ac6b323fdb2b210723631c298b92561c3801221612304a3821856dbeefa97b8fad7a0c21345dcffec16bc3d5948318ad3730a32f8c1e71cdc935deb724d5b3525606543cd69a4bdf153266c47b9ea6bfd10d8f134232e860ff221993c1147584869608b79ed6c654c9e1e385725a56c2cfac7590c60a838cd49039f3adb903d7666c13fa14163fc30c650c410cef89e73710a17c5b940cd0123d9fa07b8383ef269b8061d75b53947c543b5301b3e6a6356351aa1fa2499a2da96d8d3c03258c07a1a7f62e45b3e4896d7d8d66c3cf5f08aac497b233ad66efc2c40faad1c4bdc36eb0aae09356f08fd73dcc0a894d89e29b73ac28fbb06bd129f6c69d8b44ba82f1ea81d3df82ce3747296c9d9cd2fa2e3f56fbb0ba33917dc9e37339cf1c755a2be6d797320d5eba7b5700dcedb20d348c75e04817d62d91d90eec9fb4995204e16583de375b859b5b0053dd014f815647a7c0ed19f5aed903b750a7b37abf5af12fbe5f69ad9f2bca01e5d34a0dbd9b0318345be4717ac062292b1daaae5cf08d00e3439835e5eafeb4971c671b83f85c9c48aa138ccffd922951172728b73d075a36ff905e4a3f98ae252dbf883fbaa4f3d01fe60514753e6dab5ad42addb84dec63e1d0a188fb0a2d6f207c16d408c5f51e76af309c8d8aebc3aa7694adce4f16e2cdd805ca1537379ff0c019e4a2447cb67031dfe194e9fbfc70158e455c5974384085aba55bd94861b10f6b5f5aa9c57236a17ccb4a256f53ea336103f6399f713263d952117e5af5bdf7426844c292069626816e0d1f4ce76d91c9914af12a373283f94295b859f0607e573cea237cc0c06218060efa1fd85a19d506282445ca1f518ca3cf2000dc5219e99bf924be0d448</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T08:24:42+08:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/21/ML-final-project/" itemprop="url">
-            <span itemprop="name">ML_final_project</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python-%E7%88%AC%E8%99%AB/" rel="tag"># Python, 爬虫</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/08/mat2num/" rel="prev" title="实现MATLAB矩阵和numpy矩阵形式的转换">
+                  <i class="fa fa-chevron-left"></i> 实现MATLAB矩阵和numpy矩阵形式的转换
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T08:24:42+08:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/21/data_preparation/" itemprop="url">
-            <span itemprop="name">花卉分类——数据的准备</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-20T09:47:57+08:00"
-              content="2020-12-20">
-          12-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/20/my-life/" itemprop="url">
-            <span itemprop="name">生命 生存 生活 生命</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 
 <script>
